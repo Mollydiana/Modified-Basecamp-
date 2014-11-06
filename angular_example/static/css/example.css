@@ -1,0 +1,18 @@
+div {
+    padding: 5px;
+}
+.outsideAngular {
+    border: 1px solid red;
+    margin-bottom: 5px;
+}
+.outsideView {
+    border: 1px solid green;
+    margin-bottom: 5px;
+}
+.secondView {
+    border: 1px solid mediumpurple;
+    margin-bottom: 5px;
+}
+.view {
+    border: 1px solid blue;
+}

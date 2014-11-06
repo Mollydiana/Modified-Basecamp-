@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-------- CSS ---------->
+    <link rel="stylesheet" type="text/css" href="{% static "css/example.css" %}" />
+    <!------- Angular ------->
+    <script src="{% static "js/vendors/angular/angular.js" %}"></script>
+    <script src="{% static "js/vendors/angular/angular-route.js" %}"></script>
+
+    <!-- JavaScript -->
+    <script src="{% static "js/exampleApp.js" %}"></script>
+
+    <!------- Controllers ------->
+    <script src="{% static "js/controllers/homeController.js" %}"></script>
+    <script src="{% static "js/controllers/secondController.js" %}"></script>
+</head>
+<body>
+    <div class="outsideAngular">
+        Outside of angular app
+    </div>
+    <div ng-app="exampleApp">
+        <div class="outsideView">
+            Outside of current view, but still inside of our Angular app
+        </div>
+        <div class="secondView">
+            <a href="#/second_view">Jokes with YOUR NAME</a>
+            <a href="#/"> ~ Chuck Norris Jokes ~ </a>
+        </div>
+        <div class="view" ng-view></div>
+    </div>
+</body>
+</html>

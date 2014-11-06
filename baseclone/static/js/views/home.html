@@ -1,0 +1,24 @@
+<div class="col-sm-offset-2 col-sm-8">
+    <h1 id="title">BaseClone</h1>
+    <hr>
+    <br>
+    <h4 style="margin-left: 20%">
+        Project Name: <input ng-model="projectName"/>
+    </h4><br>
+    <h4 style="margin-left: 13%">Project Description: <input ng-model="projectDescription"/></h4><br>
+    <button type="submit" style="margin-left: 42%" ng-click="newProject();">Create New Project</button>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+    <div ng-repeat="project in projects track by $index">
+
+            <button  style="margin-left: 20%" class="btn btn-info" size="xs" ng-click="delete(project);">Delete</button>
+            ~ <a href="#/projects/{{ project.id }}">{{ project.name }}</a> - {{ project.description }}<br>
+
+
+
+        <br>
+    </div>
+            </div>
+        </div>
+</div>

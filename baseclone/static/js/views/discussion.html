@@ -1,0 +1,10 @@
+<div class="col-sm-offset-2 col-sm-8">
+<h2 id="title">Discussion Page</h2><hr>
+<h3 style="text-align: center">{{ discussion.subject }}</h3>
+<div ng-bind-html="discussion.content"></div><br>
+    <div class="col-sm-offset-2">
+    <input ng-model="newSubject" />
+<button class="btn btn-sm btn-info"ng-click="editDiscussion();">Update Subject</button>
+<button class="btn btn-sm btn-warning" ng-click="delete(discussion);">Delete Message</button>
+</div>
+</div>
