@@ -60,19 +60,19 @@ function projectController($scope, $http, $routeParams, $location, ProjectFactor
         });
 
 
-//    $scope.newCalendar = function() {
-//        var data = {
-//            "name": $scope.calendarName
-//
-//        };
-//        $http.post('/proxy/calendars.json', data).
-//            success(function(){
-//                console.log("worked");
-//            }).error(function(error){
-//                console.log('fail');
-//            })
-//
-//    }
+    $scope.newCalendar = function() {
+        var data = {
+            "name": $scope.calendarName
+
+        };
+        $http.post('/proxy/calendars.json', data).
+            success(function(){
+                console.log("worked");
+            }).error(function(error){
+                console.log('fail');
+            })
+
+    }
 
     };
     $scope.hasAttachment = function(filterData){

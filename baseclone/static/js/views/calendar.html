@@ -1,3 +1,4 @@
+<br><br>
 <h2>{{ calendar.id }}</h2>
 <div ng-repeat="event in events">
     <h1>{{ event.summary }}</h1>
@@ -8,13 +9,13 @@
 </div>
 <div class="col-sm-offset-2 col-sm-4">
     <h2>New Event</h2><hr>
-    <div>Event Name: <input ng-model="calName" /></div>
-    <div>Event Description: <input ng-model="calDescription" /></div>
+    <div>Event Name: <input ng-model="calName" /></div><br>
+    <div>Event Description: <input ng-model="calDescription" /></div><br>
     <p>Proper format for start date is: 2014-12-28</p>
     <div>Start Date: <input ng-model="calStarts" /></div><br>
     <button ng-click="newEvent();">Create New Event</button>
 </div>
-<div class="col-sm-4">
+<div class="col-sm-4 col-sm-offset-1">
     <h3>Edit or Delete {{ event.name }}</h3><hr>
     <div>Calendar Name: <input ng-model="editedName" /></div>
     <button ng-click="editCalendar(calendar.id);">Edit {{ calendar.name }}</button>

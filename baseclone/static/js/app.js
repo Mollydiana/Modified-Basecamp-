@@ -1,4 +1,4 @@
-var baseclone = angular.module('baseclone', ['ngRoute', 'ngResource', 'ngSanitize']);
+var baseclone = angular.module('baseclone', ['ui.bootstrap', 'ngRoute', 'ngResource', 'ngSanitize']);
 
 baseclone.config(['$routeProvider', function($routeProvider) {
     $routeProvider.

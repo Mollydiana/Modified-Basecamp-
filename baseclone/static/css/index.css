@@ -1,6 +1,61 @@
 body {
-    background-color: whitesmoke;
-    font-family: "Bookman Old Style", Bookman, Garamond, serif;
+    background-color: #f5efe6;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+body > header div.logo > a {
+    background: url(https://d3dma7a8zw52bz.cloudfront.net/assets/logos/bc_logo-d92f5204aea5889ca56795a4666c60fe.png) no-repeat center top;
+    text-indent: -9000px;
+    display: block;
+    height: 41px;
+    width: 138px;
+    margin-top: 22px;
+    margin-left: 40px;
+
+}
+
+nav.has_announcements div.announcements_link {
+    text-align: left;
+    position: absolute;
+    left: 220px;
+    top: 34px;
+    text-shadow: 0 1px #fff;
+}
+
+div.global_links {
+    text-align: left;
+    position: absolute;
+    left: 348px;
+    top: 34px;
+    padding-left: 20px;
+    border-left: 1px solid #ded7c8;
+    text-shadow: 0 1px #fff;
+}
+
+.navLinks {
+    margin-right: 40px;
+}
+
+div {
+    display: block;
+}
+
+body > header {
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0 40px 0px 50px;
+    zoom: 1;
+    clear: both;
+    display: inline-block;
+    padding: 0px;
+    font-family: "ProximaNova", "Helvetica Neue", helvetica, arial, sans-serif;
+    width: 100%;
+}
+
+nav.has_announcements div.announcements_link a {
+    white-space: nowrap;
+    color: #c00;
 }
 
 .nav, .pagination, .carousel, .panel-title a {
@@ -23,24 +78,47 @@ body {
     background-color: lightcyan;
 }
 
-input.ng-dirty.ng-valid { border:3px solid Green; }
-textarea.ng-dirty.ng-valid { border:3px solid Green; }
+input.ng-dirty.ng-valid {
+    border: 3px solid Green;
+}
 
-input.ng-dirty.ng-invalid { border:3px solid Red; }
-textarea.ng-dirty.ng-invalid { border:3px solid Red; }
+textarea.ng-dirty.ng-valid {
+    border: 3px solid Green;
+}
 
-.required { display: none; color:red; }
-.ng-invalid-required ~ span.required { display:inline; }
+input.ng-dirty.ng-invalid {
+    border: 3px solid Red;
+}
+
+textarea.ng-dirty.ng-invalid {
+    border: 3px solid Red;
+}
+
+.required {
+    display: none;
+    color: red;
+}
+
+.ng-invalid-required ~ span.required {
+    display: inline;
+}
 
 .projectName {
     margin: 5px;
 }
 
 #title {
+    margin-top: 50px;
     text-align: center;
-    font-family: fantasy;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
 }
 
 .projectTitles {
-    font-family: fantasy;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
 }

@@ -1,21 +1,22 @@
 <div class="col-sm-offset-1 col-sm-3">
     <br>
+
     <h3 class="projectTitles">Projects:</h3>
     <hr>
     <br>
     <li>
-        <div>{{ project.name }} - <span style="font-style: italic">{{ project.description }} </span></div>
+        <div >{{ project.name }} - <span style="font-style: italic">{{ project.description }} </span></div>
     </li>
     <br>
     <button type="submit" ng-click="delete();">Delete Project</button>
     <hr>
-    Name: <input ng-model="projectName"/><br><br>
+    Name: <span><input ng-model="projectName"/></span><br><br>
     Description: <input ng-model="projectDescription"/><br><br>
     <button type="submit" ng-click="update();">Update Project</button>
     <br><br>
     *****************************************
     <div ng-repeat="project in projects">
-        <li><a href="#/projects/{{ project.id }}">{{ project.name }}</a> - {{ project.description }}</li>
+        <li style="font-family: 'Gloria Hallelujah', cursive;"><a href="#/projects/{{ project.id }}">{{ project.name }}</a> - {{ project.description }}</li>
         <br>
     </div>
 
@@ -27,14 +28,21 @@
         <h3 class="projectTitles">Topics:</h3>
         <hr>
         <bc-searchbar></bc-searchbar>
-        <p>Only with attachments: <input type="checkbox" ng-model="attachmentBoolean" /></p><hr>
-    <div ng-repeat="topic in topics | filter: searchText | filter: hasAttachment | topicTypeFilter:'Message'">
-        <a href="#/projects/{{ project.id }}/discussion/{{ topic.topicable.id }}">
-                <div><p>{{ topic.excerpt }}</p><hr>
-                <button class="btn btn-sm btn-info"ng-click="linkToSearch();">Copy To Clipboard</button>
-        </div></a>
+        <accordion>
+            <p>Only with attachments: <input type="checkbox" ng-model="attachmentBoolean"/></p>
+            <hr>
+            <accordion-group heading="{{ topic.title }}"
+                             ng-repeat="topic in topics | filter: searchText | filter: hasAttachment">
+                <a href="#/projects/{{ project.id }}/discussion/{{ topic.topicable.id }}">
+                    <div style=" font-weight: bold"> {{ topic.title }}</div>
+                    <div><p>{{ topic.excerpt }}</p>
+                        <button class="btn btn-sm btn-info" ng-click="linkToSearch();">Copy To Clipboard</button>
+                        <hr>
+                    </div>
+                </a>
 
-    </div>
+            </accordion-group>
+        </accordion>
     </div>
 </div>
 <div class="col-sm-offset-1 col-sm-3">
@@ -42,23 +50,25 @@
     <h3 class="projectTitles">Calendar Events:</h3>
     <hr>
     <div ng-repeat="event in calendars track by $index"><br>
-        <li><a href="#/calendars/{{ event.id }}">{{ event.summary }}</a></li>
+        <li style="font-family: 'Gloria Hallelujah', cursive;"><a href="#/calendars/{{ event.id }}">{{ event.summary }}{{ event.description }}</a></li>
         <hr>
     </div>
 
     ******************************************
 
-<div ng-repeat="event in calendars">
-    <div>
-        <a href="#/calendars/{{ event.id }}" >{{ event.name }}</a>
+    <div ng-repeat="event in calendars">
+        <div>
+            <a href="#/calendars/{{ event.id }}">{{ event.name }}</a>
+        </div>
     </div>
-</div>
-<div>
+    <div>
 
-    <h4 class="projectTitles">Create Calendar</h4>
-    <div>Name: <input ng-model="calendarName" /></div><br>
-    <button type="submit" ng-click="newCalendar();">Create New Calendar</button>
-</div>
+        <h4 class="projectTitles">Create Calendar</h4>
+
+        <div>Name: <input ng-model="calendarName"/></div>
+        <br>
+        <button type="submit" ng-click="newCalendar();">Create New Calendar</button>
+    </div>
 
 </div>
 
